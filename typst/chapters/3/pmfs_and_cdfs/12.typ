@@ -1,0 +1,10 @@
++ 
+
++ \url{https://drive.google.com/file/d/1vAAxLU7hvihAHOEcHx8Nc-9xapGlzc-I/view?usp=sharing}
+
++ Let $I subset X$ be the subset of the support where $P_{1}(x) < P_{2}
+(x)$. Then $\sum_{x in X} P_{1}(x) = \sum_{x in I}P_{1}(x) + \sum_{x in
+X \setminus I}P_{1}(x) < \sum_{x in I}P_{2}(x) + \sum_{x in
+X \setminus I}P_{2}(x) = 1.$
+
+Thus, having such a property in PMFs is impossible.

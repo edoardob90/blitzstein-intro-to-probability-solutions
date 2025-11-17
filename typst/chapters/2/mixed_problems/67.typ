@@ -1,0 +1,12 @@
++ 
+
++ Unconditionally, each of the $c + g + j$ donuts is equally likely to be
+the last one. Thus, the probability that the last donut is a chocolate donut is
+$(c)/(c + g + j)$.
+
++ We are interested in the event that the last donut is chocolate and the
+last donut that is either glazed or jelly is jelly. The probability that the
+last donut is chocolate is $(c)/(c + g + j)$. Since any ordering of glazed
+and jelly donuts is equally likely, the probability that the last one is a jelly
+donut is $(j)/(g + j)$. Thus, the probability of the desired event is
+$(c)/(c + g + j)*(j)/(g + j)$.

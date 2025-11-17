@@ -1,0 +1,6 @@
+There are $binom(11, 4)$ ways to select $4$ positions for $I$, $binom(7, 4)$
+
+ways to select $4$ postions for $S$, $binom(3, 2)$ ways to selection $2$ 
+positions for $P$ leaving us with a single choice of position for $M$. In total, 
+we get
+$binom(11, 4)binom(7, 4)binom(3, 2)binom(1, 1)$ permutations.

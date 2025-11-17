@@ -1,0 +1,11 @@
++ 
+
++ Suppose, toward a contradiction, that X and Y do not have the same PMF. Then there is at least one k in the support of X such that $P(X=k)$ and $P(Y=k)$ are not equal. 
+
+Note that if $P(X=Y)=1$, then $P(X=Y|X=k) = P(X=Y|Y=k) = P(X=k|Y=k) = P(Y=k | X=k) = 1$, as an event with probability 1 will still have probability 1 conditioned on any non-zero event.
+
+Using the above and examining Bayes' theorem, we have $P(X=k|Y=k) = P(Y=k|X=k)*P(X=k)/P(Y=k)$, which simplifies to $1 = P(X=k)/P(Y=k)$ as the conditional probabilities equal 1 as previously shown. However, this equality is impossible if $P(X=k) =/= P(Y=k)$. This contradicts the assumption that $P(X=Y)=1$ - therefore, X and Y must have the same PMF if they are always equal. 
+
++ Let X, Y be r.v.s with probability 1 of equalling 1, and probability 0 of equalling any other value.
+
+Then for $x=y=1$ $P(X = x \wedge Y = y) = 1 = P(X=x)P(Y=y)$, and for all other possible pairs of values $x,y$, $P(X=x \wedge Y = y) = 0 = P(X=x)P(Y=y)$. Therefore, X, Y can be independent in this extreme case.

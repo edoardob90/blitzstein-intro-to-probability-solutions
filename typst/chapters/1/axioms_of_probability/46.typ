@@ -1,0 +1,2 @@
+$B_{k} = C_{k} - C_{k+1}$. Since $C_{k+1} subset.eq C_{k}$, 
+$P(B_{k}) = P(C_{k}) - P(C_{k+1})$.

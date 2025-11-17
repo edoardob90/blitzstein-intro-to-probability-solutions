@@ -1,0 +1,93 @@
+Let's start defining some convenient r.v.s for this problem:
+
+- 
+    
++ $D_i$: value of the i-th roll.
+    
++ $w_1$: winning if one keeps playing after the first roll.
+    
++ $w_2$: winning if one keeps playing after the second roll.
+
+The optimal strategy is to stop if the value of the last roll is greater than the expected winning if one keeps playing.
+In other words, keep rolling if doing so brings winnings that are, on average, greater than the last roll:
+
++ 
+
++ If $D_1 > E(w_1)$, STOP after 1 roll.
+
++ Else if $D_2 > E(w_2)$, STOP after 2 rolls.
+
+Since the rolls are independent, we can calculate the expectations of $w_1$ and $w_2$ in reverse order.
+
+The winning $w_2$ is equal to the value of the third roll:
+
+$E(w_2) = E(D_3) = \sum_{x=1}^6 x \, P(D_3=x) = (1)/(6) * (1+2+3+4+5+6)$
+
+$E(w_2) = 3.50 \text{ dollars}$
+
+This reveals the second part of the optimal strategy: stop after 2 rolls if $D_2 \ge 4$.
+
+The PMF of $w_1$ is given by
+
+$
+\begin{split}
+    P(w_1=x)  = P(D_2<4, D_3=x) = (3)/(6) * (1)/(6)
+
+     = (3)/(36) \text{ for } x=1,2,3
+\end{split}
+$
+
+$
+\begin{split}
+    P(w_1=x)  = P(D_2=x union D_2<4,D_3=x) = (1)/(6) + (3)/(6) * (1)/(6)
+
+     = (9)/(36) \text{ for } x=4,5,6
+\end{split}
+$
+
+Using those probabilities to calculate the expected winning $w_1$ from the definition of expectation:
+
+$E(w_1) = \sum_{x=1}^6 x \, P(w_1=x) = 4.25 \text{ dollars}$
+
+Now we can fully describe the optimal strategy, which maximizes the expected winnings:
+
++ 
+
++ If the value of the first roll is $\ge$ 5, STOP after 1 roll.
+
++ Else if the value of the second roll is $\ge$ 4, STOP after 2 rolls.
+
+Finally, let's calculate the expected winning $W^*$ of the optimal strategy.
+The PMF of $W^*$ is calculated below
+
+$
+\begin{split}
+    P(W^*=x)  = P(D_1<5 , D_2<4 , D_3=x) = (4)/(6) * (3)/(6) * (1)/(6)
+
+     = (12)/(6^3) \text{ for } x=1,2,3
+\end{split}
+$
+
+$
+\begin{split}
+    P(W^*=4)  = P(D_1<5 , D_2=4 union D_1<5 , D_2<4 , D_3=4)
+
+     = (4)/(6)*(1)/(6) + (4)/(6)*(3)/(6)*(1)/(6)
+
+     = (36)/(6^3)
+\end{split}
+$
+
+$
+\begin{split}
+    P(W^*=x)  = P(D_1=x union D_1<5,D_2=x union D_1<5,D_2<4,D_3=x)
+
+     = (1)/(6) + (4)/(6)*(1)/(6) + (4)/(6)*(3)/(6)*(1)/(6)
+
+     = (72)/(6^3) \text{ for } x=5,6
+\end{split}
+$
+
+Plugging these probabilities into the definition of expectation:
+
+$E(W^*) = \sum_{x=1}^6 x \, P(W^* = x) = 4.67 \text{ dollars}$

@@ -1,0 +1,21 @@
++ 
+
++ $F(x) = pF_{1}(x) + (1-p)F_{2}(x)$.
+
+Let $x_{1} < x_{2}$. Then $F(x_{1}) = pF_{1}(x_{1}) + (1-p)F_{2}(x_{1}) < pF_
+{1}(x_{2}) + (1-p)F_{2}(x_{2}) = F(x_{2}).$
+
+Since $F(x)$ is a weighted sum of right continuous functions, it is itself a
+right continuous function.
+
+$\lim_{x \to infinity} F(x) = p\lim_{x \to infinity} F_{1}(x) + (1 - p)\lim_{x \to
+infinity} F_{2}(x) = p + 1 - p = 1.$
+
+Similarly, $\lim_{x \to -infinity}F(x) = 0.$
+
++ Let $X$ be an r.v. created as described. Let $H$ be the event that coin
+lands heads, and $T$ be the event that the coin lands tails.
+
+Then, $F(X=k) = P(H)F_{1}(k) + P(T)F_{2}(k) = pF_{1}(k) + (1-p)F_{2}(k).$
+
+Note that this is the same CDF as in part $a$.

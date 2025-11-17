@@ -1,0 +1,9 @@
+Suppose the word consists of $7$ letters. Once we choose the first letter, 
+the seventh one has to be the same. Once we choose the second letter, the 
+sixth one has to be the same. In general, we are free to choose $4$ letters. 
+Hence, the probability that a $7$ letter word is a palindrome is 
+$\frac{26^{4}}{26^{7}} = (1)/(26^{3)}$
+
+If the word consists of $8$ letters, then there are $26^{8}$ possible words, 
+but for a palindrome, the number of letters we are free to choose is still $4$. 
+Hence, the probability is $\frac{26^{4}}{26^{8}} = (1)/(26^{4)}$

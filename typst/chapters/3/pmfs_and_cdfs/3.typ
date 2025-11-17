@@ -1,0 +1,1 @@
+$P(Y lt.eq k) = P(X lt.eq (k-\mu)/(\sigma)) = F((k-\mu)/(\sigma)).$

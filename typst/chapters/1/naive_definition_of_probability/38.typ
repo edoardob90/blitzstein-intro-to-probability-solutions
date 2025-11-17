@@ -1,0 +1,13 @@
++ 
+
++ There are $12$ choices of seats for Tyron and Cersei so that they sit 
+next to each other ($11$ cases, where they take $i-1$ and $i$ positions and 
+1 case, where they take 1 and 12th position, because table is round). 
+Tyron can sit to the left or to the right of Cersei.  
+The remaining $10$ people can be ordered in $10!$ ways, so the answer is
+$(24times10!)/(12!) = (2)/(11)$
+
++ There are $binom(12, 2)$ choices of seats to be assigned to Tyron and 
+Cersei, but only $12$ choices where they sit next to each other. 
+Since every assignment of seats is equally likely the answer is
+$(12)/(binom(12, 2)) = (2)/(11)$

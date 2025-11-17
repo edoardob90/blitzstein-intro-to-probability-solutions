@@ -1,0 +1,14 @@
+There are $4$ choices for sizes and $8$ choices for toppings, of which any
+combination (including no toppings) can be selected.
+
+The total number of possible choices of toppings is $sum_(i=0)^(8)\binom{8}
+{i} = 2^8 = 256$. Thus, the total number of possible size-topping combinations
+is $4 * 256 = 1024$.
+
+We wish to sample two pizzas, with replacement, out of the $1024$ possibilities.
+By Einstein-Bose, there are a total of $binom(1025, 2)$ choices.
+
+A common mistake is to use multiplication rule to get $(2^8)*(2^8)$ as 
+total possible combinations for two pizzas, and try to adjust for overcounting
+by dividing the result with 2 (as order between pizzas doesn't matter). This 
+fails because the possibilities with identical pizzas are counted only once.

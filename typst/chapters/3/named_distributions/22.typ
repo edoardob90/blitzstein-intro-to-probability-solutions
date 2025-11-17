@@ -1,0 +1,16 @@
++ 
+
++ Let $C_{i}$ be the event that $i$-th type of coin is chosen. Let $H_{k}$
+be the event that $k$ out of the $n$ flips land heads.
+
+$P(X = k) = P(C_{1})P(H_{k}|C_{1}) + P(C_{2})P(H_{k}|C_{2}) = (1)/(2)
+binom(n, k)p_{1}^{k}(1-p_{1})^{n-k}+ (1)/(2)
+binom(n, k)p_{2}^{k}(1-p_{2})^{n-k}$
+
++ if $p_{1} = p_{2}$, then $X$ is Binomial $n$, $k$.
+
++ If $p_{1} eq.not p_{2}$, then the Bernoulli trials are not independent. If,
+for instance, $p_{1}$ is small and $p_{2}$ is large, and after the first
+million flips we see two heads, this increases the likelihood that we are using
+the coin with probability $p_{1}$ of landing heads, which in turn tells us that 
+subsequent flips are unlikely to be land heads.

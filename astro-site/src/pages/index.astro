@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const chapters = [
+  { num: 1, title: "Probability and Counting" },
+  { num: 2, title: "Conditional Probability" },
+  { num: 3, title: "Random Variables and Their Distributions" },
+  { num: 4, title: "Expectation" },
+  { num: 5, title: "Continuous Random Variables" },
+  { num: 6, title: "Moments" },
+];
+---
+
+<BaseLayout title="Introduction to Probability - Solutions">
+  <h1>Introduction to Probability</h1>
+  <p class="subtitle">Solution Manual</p>
+
+  <section style="margin-top: 2rem;">
+    <p>
+      Contributed solutions to end of chapter exercises in <em>Introduction to Probability</em>,
+      2nd edition by Joe Blitzstein and Jessica Hwang.
+    </p>
+
+    <p>
+      The book contains many fantastic exercises that help develop intuition for thinking
+      probabilistically. The authors provide solutions to some of these exercises on the book
+      <a href="https://projects.iq.harvard.edu/stat110/home">website</a>, but most don't have
+      published solutions. This repository aims to provide solutions for self-learners.
+    </p>
+  </section>
+
+  <section style="margin-top: 3rem;">
+    <h2>Chapters</h2>
+    <ul style="list-style: none;">
+      {chapters.map(chapter => (
+        <li style="margin: 1rem 0;">
+          <a href={`/chapters/${chapter.num}`} style="font-size: 1.2rem;">
+            Chapter {chapter.num}: {chapter.title}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section style="margin-top: 3rem;">
+    <h2>About This Project</h2>
+    <p>
+      This site is built using <strong>Typst</strong> for document generation and
+      <strong>Astro</strong> for the web interface. All solutions are community-contributed
+      and open source.
+    </p>
+  </section>
+</BaseLayout>

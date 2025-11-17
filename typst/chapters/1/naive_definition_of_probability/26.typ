@@ -1,0 +1,16 @@
++ 
+
++ The problem is isomorphic (having same structure) to the birthday
+problem. When sampling with replacement, each person corresponds to 
+a date in the birthday problem, and the size of sample corresponds to
+the number of people in birthday problem. Hence, taking a random
+sample of $1000$ from a population of a million corresponds to asking
+a thousand people their birth date where there are a total of a million
+dates. Number of ways to take such a sample is $K^{1000}$ where $K$ is
+size of population.
+Similarly, number of ways to take sample without replacement corresponds
+to number of ways of having no birthday match in that situation:
+$K(K-1) ... (K-1000+1)$
+
++ $P(A) = 1 - P(A^{c}) = 1 - (K(K-1) ... (K-1000+1))/(K^{1000)}$ 
+where $K = 1000000$.

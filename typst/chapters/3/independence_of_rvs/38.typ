@@ -1,0 +1,8 @@
++ 
+
++ Let $Y = X + 1$. Then, $X$ and $Y$ are clearly dependent, and $P(X < Y) =
+1$.
+
++ Let $X$ be the value of a toss of a six sided die, with values $1$ to $6$.
+Let $Y$ be the value of a toss of a six sided die, with values $7$ to $12$.
+Tosses of the two die are independent, but $P(X < Y) = 1$.

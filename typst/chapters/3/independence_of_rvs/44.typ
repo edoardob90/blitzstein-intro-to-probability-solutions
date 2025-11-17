@@ -1,0 +1,58 @@
++ 
+
++ $P(X \bigoplus Y) \sim$ Bern$((p)/(2))$
+
++ If $p eq.not (1)/(2)$, $X \bigoplus Y$ and $Y$ are not independent.
+Imagine that $X=0$ is extremely unlikely. Then, knowing that $Y=0$ makes it very
+likely that $X \bigoplus Y = 1$. If $p = (1)/(2)$, then $X \bigoplus Y$ and
+$Y$ are independent.
+
+$X \bigoplus Y$ and $X$ are
+independent, since knowledge of $X$ still keeps the probability of $Y = 1$ at
+$(1)/(2)$
+
++ Let the largest element in $J$ be $m$.
+
+\begin{flalign}
+P(Y_{J}=1)  = P(X_{m}=1)P(Y_{J\setminus \{m\}}=0) + P(X_{m}=0)P(Y_{J
+\setminus \{m\}}=1) \nonumber  
+
+  = (1)/(2)(P(Y_{J\setminus \{m\}}=0) + P(Y_{J
+\setminus \{m\}}=1)) \nonumber  
+
+  = (1)/(2) \nonumber
+\end{flalign}
+
+Thus, $Y_{J} \sim Bern((1)/(2))$
+
+To prove pairwise independence: Let $J$, $J'$ be two arbitrary subsets of $\{1...n\}$. We want to show that $P(Y_{J} = a \wedge Y_{J'} = b) = P(Y_{J}=a)P(Y_{J}=b) = 1/4$ for $a,b in \{0,1\}$, with the second equality coming from our knowledge that $Y_{J} \sim Bern(1/2)$ for all $J$. 
+
+First, let us note that for all $J, J'$ that are disjoint, $Y_{J}, Y_{J'}$ are independent - this follows from the independence of the $X_{i}$. 
+
+Now, suppose $J, J'$ are not disjoint. Let $A = J sect J'$, let $B = J \setminus A$, and let $C = J' \setminus B$. By definition, $A, B, C$ are disjoint. 
+
+Now, we have $P(Y_{J} = a \wedge Y_{J'} = b) = P(Y_{J} = a, Y_{J'} = b | Y_{A}=1) P(Y_{A}=1) + P(Y_{J} = a, Y_{J'} = b | Y_{A}=0)P(Y_{A}=0)$
+
+using the LOTP. Continuing, we have
+
+$= P(Y_{B} = 1-a, Y_{C} = 1-b|Y_{A}=1)P(Y_{A}=1) + P(Y_{B} = a, Y_{C} = b|Y_{A}=0)P(Y_{A}=1)$
+
+by noting that if $x \oplus 1 = y$, we must have $y = 1-x$ and if $x \oplus 1 = y$, we have $y=x$. Continuing, we get
+
+$ = P(Y_{B} = 1-a)P(Y_{C}=1-b)P(Y_{A}=1) + P(Y_{B} = a)P(Y_{C}=b)P(Y_{A}=0)$
+
+We can remove the conditioning since $A, B, C$ are disjoint, and therefore $Y_{B}, Y_{C}, Y_{A}$ are all independent r.v.s. Finally, we realize that since all $Y$ are $Bern(1/2)$, this results in
+
+$ = (1/2)^3+(1/2)^3 = 1/4 = P(Y_{J} = a)P(Y_{J'}=b)$
+
+as desired - $Y_{J}, Y_{J'}$ are independent for any pair $J, J'$. 
+
+To prove that the $Y_{J}$ are not all independent, consider the subsets $S=\{1\}, S'=\{2\}, S''\{1,2\}$. It is clear that if $Y_{S} = 1$ and $Y_{S'}=1$, then $Y_{S''} = Y_{S} \oplus Y_{S'} = 0$. However, this implies that 
+
+$P(\bigcap_{J subset.eq \{1..n\}}Y_{J}=1) = 0$
+
+i.e. it is impossible for all $Y$ to simultaneously equal 1. However, we know that
+
+$\prod_{J subset.eq \{1..n\}}P(Y_{J}=1) = (1/2)^{2n-1} eq.not 0$
+
+Thus, the $Y_{J}$ are not independent.

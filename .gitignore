@@ -6,3 +6,42 @@ _book
 _bookdown_files
 rsconnect
 output
+
+# Astro
+astro-site/node_modules/
+astro-site/dist/
+astro-site/.astro/
+
+# Typst output
+typst/**/*.pdf
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Generated content
+astro-site/src/content.json
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.pdf
+*.dvi
+*.ps
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db

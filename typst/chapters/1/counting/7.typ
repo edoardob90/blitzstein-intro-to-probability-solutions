@@ -1,0 +1,110 @@
++ 
+  
++ There are ${7 \choose 3}$ ways to assign three wins to player $A$. For a 
+  specific combination of three games won by $A$, there are ${4 \choose 2}$ ways 
+  to assign two draws to $A$. There is only one way to assign two losses to $A$ 
+  from the remaining two games, namely, $A$ losses both games.
+  
+    $ {7 \choose 3} times {4 \choose 2} times {2 \choose 2} $
+  
+  
++ If $A$ were to draw every game, there would need to be at least $8$ 
+  games for $A$ to obtain $4$ points, so $A$ has to win at least $1$ game. 
+  Similarly, if $A$ wins more than $4$ games, they will have more than $4$ points.
+
+    
+
+    Case 1: $A$ wins $1$ game and draws $6$.
+    
+    This case amounts to selecting $1$ out of $7$ for $A$ to win and assigning a 
+    draw for the other $6$ games. Hence, there are $7$ possibilities.
+      
+    Case 2: $A$ wins $2$ games and draws $4$.
+    
+    There are ${7 \choose 2}$ ways to assign $2$ wins to $A$. For each of them, 
+    there are ${5 \choose 4}$ ways to assign four draws to $A$ out of the 
+    remaining $5$ games. Player $B$ wins the remaining game. The total number 
+    of possibilities for this case is ${7 \choose 2} times {5 \choose 4}$.
+    
+    Case 3: $A$ wins $3$ games and draws $2$.
+    
+    There are ${7 \choose 3}$ ways to assign $3$ wins to $A$. For each of them, 
+    there are ${4 \choose 2}$ ways to assign two draws to $A$ out of the remaining 
+    $4$ games. $B$ wins the remaining $2$ games. The total number of possibilities 
+    for this case is ${7 \choose 3} times {4 \choose 2}$.
+    
+    Case 4: $A$ wins $4$ games and loses $3$.
+    
+    There are ${7 \choose 4}$ ways to assign $4$ wins to $A$. $B$ wins the 
+    remaining $3$ games.
+    The total number of possibilities for this case is ${7 \choose 4}$.
+    
+    Summing up the number of possibilities in each of the cases we get
+    
+    $ {7 \choose 1} + {7 \choose 2} times {5 \choose 4} + {7 \choose 3} times 
+    {4 \choose 2} + {7 \choose 4} $
+  
+  
++ If $B$ were to win the last game, that would mean that $A$ had already 
+  obtained $4$ points prior to the last game, so the last game would not be 
+  played at all. Hence, $B$ could not have won the last game. 
+  The last game must have ended in either A winning (case 1) or a draw (case 2).
+
+    
+
+    Case 1: $A$ wins the last game. This means $A$ had 3 points
+    after 6 games. 
+    
+    There are four possibilities for $A$ to earn 3 points in 6 games:
+  
+    + 
+      
++ 6 draws
+      
++ 3 wins and 3 losses
+      
++ 2 wins, 2 draws, and 2 losses
+      
++ 1 win, 4 draws, and 1 loss.
+    
+  
+    Let's calculate the number of possibilities for each of these subcases.
+  
+    + 
+      
++ There is only one way to assign 6 draws to 6 games: The number of possibilities is 1.
+      
++ There are ${6 \choose 3}$ ways to assign 3 wins to $A$ out of the first 6 games. The remaining 3 games are losses for $A$. The number of possibilities is ${6 \choose 3}$.
+      
++ There are ${6 \choose 2}$ ways to assign 2 wins to $A$ out of the first 6 games. There are ${4 \choose 2}$ ways to assign 2 draws out of the remaining 4 games. The remaining 2 games are losses for $A$. The number of possibilities is ${6 \choose 2} times {4 \choose 2}$.
+      
++ There are ${6 \choose 1}$ ways to assign 1 win to $A$ out of the first 6 games. There are ${5 \choose 4}$ ways to assign 4 draws out of the remaining 5 games. The remaining game is a loss for $A$. The number of possibilities is ${6 \choose 1} times {5 \choose 4}$.
+    
+  
+    Case 2: The last game ends in a draw. This means $A$ had 3.5 points after 6 games. 
+    
+    There are three possibilities for $A$ to earn 3.5 points in 6 games:
+  
+    + 
+      
++ 3 wins, 1 draw, and 2 losses
+      
++ 2 wins, 3 draws, and 1 loss
+      
++ 1 win, 5 draws.
+    
+  
+    Let's calculate the number of possibilities for each of these subcases.
+  
+    + 
+      
++ There are ${6 \choose 3}$ ways to assign 3 wins to $A$ out of the first 6 games. There are ${3 \choose 1}$ ways to assign 1 draw out of the remaining 3 games. The remaining 2 games are losses for $A$. The number of possibilities is ${6 \choose 3} times {3 \choose 1}$.
+      
++ There are ${6 \choose 2}$ ways to assign 2 wins to $A$ out of the first 6 games. There are ${4 \choose 3}$ ways to assign 3 draws out of the remaining 4 games. The remaining game is a loss for $A$. The number of possibilities is ${6 \choose 2} times {4 \choose 3}$.
+      
++ There are ${6 \choose 1}$ ways to assign 1 win to $A$ out of the first 6 games. The remaining 5 games are losses for $A$. The number of possibilities is ${6 \choose 1}$.
+    
+  
+    The total number of possibilities then is:
+    
+    $ 1 + {6 \choose 3} + {6 \choose 2} times {4 \choose 2} + {6 \choose 1} times {5 \choose 4} + {6 \choose 3} times {3 \choose 1} + {6 \choose 2} times {4 \choose 3} + {6 \choose 1} $

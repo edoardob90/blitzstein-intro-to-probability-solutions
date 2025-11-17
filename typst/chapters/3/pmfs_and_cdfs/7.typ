@@ -1,0 +1,13 @@
+To find the probability mass function (PMF) of $X$, we need to determine the probabilities of Bob reaching each level from 1 to 7.
+
+Level 1 is the highest level reached by Bob if he fails to pass level 1, which happens with probability $1-p_1$.
+Thus, $P(X=1) = 1 - p_1$.
+
+For $2 lt.eq j lt.eq 6$, $P(X = j)$ is the probability of reaching level $j$ but not reaching level $j+1$. 
+This can be calculated as 
+
+$P(X = j) = p_1 dot.c p_{j-1}  (1 - p_j)$.
+
+Bob reaches level 7 if he passes each level from 1 to 6:
+
+$P(X = 7) = p_1 \, p_2 \, p_3 \, p_4 \, p_5 \, p_6$.

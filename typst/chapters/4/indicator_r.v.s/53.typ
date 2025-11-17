@@ -1,0 +1,16 @@
+Let $I_{j}$ be the indicator variable for tosses $j$ and $j+1$ landing heads for
+$1 lt.eq j lt.eq 3$. Then, the expected number of such pairs is $\text{E}(X) =
+sum_(j=1)^(3)P(I_{j}=1) = 3p^{2}$. $\text{Var}(X) = \text{E}(X^{2}) -
+9p^{4}$.
+
+$\text{E}(X^{2}) = \text{E}((sum_(j=1)^(3)I_{j})^{2}) = \text{E}((I_{1} + I_
+{2})^{2} + 2(I_{1}+I_{2})I_{3} + I_{3}^{2}) = \text{E}(I_{1}^{2} + 2I_{1}I_{2}
++ I_{2}^{2} + 2I_{1}I{3} + 2I_{2}I{3} + I_{3}^{2})$. 
+
+Note that $I_{j}^{2} = I_
+{j}$. 
+
+Note that $E(I_{1}I_{2})=E(I_{2}I_{3})=p^{3}$ as these require 3 consecutive heads to equal 1, but $E(I_{1}I_{3}) = p^{4}$ as this requires 4 consecutive heads to equal 1. Thus, $\text{E}(X^{2}) = (p^{2} + 2p^{3} + p^{2} + 2p^{4} + 2p^{3} + p^
+{2}) = 4p^{3} + 3p^{2} + 2p^{4}$.
+
+Thus, $\text{Var}(X)= 4p^{3} + 3p^{2} - 7p^{4}$

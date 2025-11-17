@@ -1,0 +1,11 @@
++ 
+
++ Counting strictly increasing sequences of $k$ numbers amounts to counting 
+the number of ways to select $k$ elements out of the $n$, since for any such 
+selection, there is exactly one increasing ordering. Thus, the answer is 
+$(binom(n, k))/(n^k)$
+
++ The problem can be thought of sampling with replacement where order 
+doesn't matter, since there is only one non decreasing ordering of a given 
+sequence of $k$ numbers. Thus, the answer is
+$(binom(n-1+k, k))/(n^k)$

@@ -1,0 +1,8 @@
+Let $I_{i}$ be the indicator of the $i$-th person voting for Kodos.
+Then, $P(I_{i}=1) = p_{1}p_{2}p_{3}.$ Since the voters make their decisions
+independently, we have $n$ independent Bernoulli trials, which is precisely the
+story for a Binomial distribution.
+
+Thus,
+
+$P(X = k) = binom(n, k)(p_{1}p_{2}p_{3})^{k}(1- p_{1}p_{2}p_{3})^{n-k}$

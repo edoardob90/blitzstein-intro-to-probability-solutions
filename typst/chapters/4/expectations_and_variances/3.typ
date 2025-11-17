@@ -1,0 +1,10 @@
++ 
+
++ Let $D$ be the value of the die roll.
+$E(D) = (1)/(6)(1 + 2 + 3 + 4 + 5 + 6) = 3.5$
+
++ Let $T_{4}$ be the total sum of the four die rolls, and let $D_{i}$ be
+the value of the $i$-th roll. Note that $T_{4} = D_
+{1} + D_{2} + D_{3} + D_{4}$. Then, by linearity of expectation,
+
+$E(T_{4}) = 4E(D_{i}) = 4*3.5 = 12.2$

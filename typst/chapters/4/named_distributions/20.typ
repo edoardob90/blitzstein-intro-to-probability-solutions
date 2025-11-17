@@ -1,0 +1,12 @@
++ 
+
++ This is not possible, since $Y$ has a non-zero probability of being a
+number larger than $100$, where as $X$ is capped at $100$.
+
++ Let $X$ be the number of contestants who enter a tournament, and let $Y$
+be the number of contestants who pass the first round. Clearly, $P(X gt.eq Y) =
+1$.
+
++ This is not possible, because if $X$ always produces values smaller or
+equal to the values produced by $Y$, then $\text{E}(X) lt.eq \text{E}(Y)$.
+However, $\text{E}(X) = 90$, and $\text{E}(Y) = 50$.

@@ -1,0 +1,10 @@
++ 
+
++ Since any applicant who is good at baseball is accepted to the college,
+the proportion of admitted students good at baseball is higher than the
+proportion of applicants good at baseball, because applicants include people who
+aren't good at either math or baseball.
+
++ Let $S$ denote the sample space. Then,
+
+$P(A|B,C) = P(A|B) = P(A) = P(A|S) < P(A|C)$.

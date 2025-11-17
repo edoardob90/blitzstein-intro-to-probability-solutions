@@ -1,0 +1,31 @@
++ 
+
++ $
+P(D|\bigcap\limits^n_{i=1}T_{i}) = \frac{P(D)P(\bigcap\limits^n_{i=1}T_{i}|D)}
+{P(\bigcap\limits^n_{i=1}T_{i})} 
+
+= \frac{pproduct_(i=1)^(n) a}{pproduct_(i=1)^(n) a + qproduct_(i=1)^(n) b} 
+
+= \frac{pa^{n}}{pa^{n} + qb^{n}}
+$
+
++ $
+P(D|\bigcap\limits^n_{i=1}T_{i}) = \frac{P(D)P(\bigcap\limits^n_{i=1}T_{i}|D)}
+{P(\bigcap\limits^n_{i=1}T_{i})} 
+
+= \frac{p(P(G)P(\bigcap\limits^n_{i=1}T_{i}|D, G) + P(G^{c})P(\bigcap\limits^n_
+{i=1}T_{i}|D, G^{c}))}{P(\bigcap\limits^n_{i=1}T_{i})} 
+
+= (p(\frac{1)/(2) + (1)/(2)a_{0}^{n})}{P(G)P(\bigcap\limits^n_
+{i=1}T_{i}|G) + P(G^{c})P(\bigcap\limits^n_{i=1}T_{i}|G^{c})} 
+
+= (p(\frac{1)/(2) + (1)/(2)a_{0}^{n})}{P(G)(P(D|G)P(\bigcap\limits^n_
+{i=1}T_{i}|D, G) + P(D^{c}|G)P(\bigcap\limits^n_{i=1}T_{i}|D^{c}, G)) + P(G^{c})
+(P(D|G^{c})P(\bigcap\limits^n_{i=1}T_{i}|D, G^{c}) + P(D^{c}|G^{c})P
+(\bigcap\limits^n_{i=1}T_{i}|D^{c}, G^{c}))} 
+
+= (p(\frac{1)/(2) + (1)/(2)a_{0}^{n})}{(1)/(2) + (1)/(2)(pa_
+{0}^{n} + (1-p)b_{0}^{n})} 
+
+= \frac{p(1 + a_{0}^{n})}{1 + pa_{0}^{n} + (1-p)b_{0}^{n}}
+$

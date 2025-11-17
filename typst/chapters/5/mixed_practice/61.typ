@@ -1,0 +1,42 @@
+(a) 
+$
+    I_k = 
+    \begin{cases}
+        1  \text{if k arrives when fun}
+
+        0  \text{if k arrives when not fun}
+    \end{cases}
+$
+
+Now $I = I_1 + ... + I_n $
+\begin{flalign}
+    bb(E)[I]  = n bb(E)[I_1] 
+
+     = (n)/(3) 
+\end{flalign}
+
+as $P(I_k = 1) = (1)/(3)$
+
+(b)
+$P(I_1 I_2) = P(I_1) P(I_2)$
+Given that Jaime and Robert are guests 1 and 2
+$P(I_1 I_2) = P(\text{both 1 and 2 arrive when fun})$
+Out of the possible $4!$ orderigns of Tyrion, Cersei, 1, and 2
+for both 1 and 2 to arrive when fun, the following orderings are possible
+
+Tyrion 1 2 Cersei
+Tyrion 2 1 Cersei
+Cersei 1 2 Tyrion
+Cersei 2 1 Tyrion
+
+So $P(I_1 I_2) = (1)/(4!) 4 = (1)/(6)$
+
+$P(I_1 I_2) \ne P(I_1) P(I_2)$
+
+(c)
+
+We already know the answer. Conditioning on the event that 1 arrives when it's fun, the chances of 2 arriving when it's fun are higher than the unconditional probability of 2 arriving when it's fun.
+When we have information of 1 arriving when it's fun, we know that there's someone arriving betweenTyrion and Cersei and this forces the conditional sample space to have a skew towards having Tyrion and Cersei further apart than if we have no information about 1.
+This skewing of the the conditional sample space increasing chances that 2 arrives at a time when it's fun.
+
+However, the events ARE conditionally independent. If we know the length of the interval of time between Cersei and Tyrion's arrivals $L$, then the probability of any other guest arriving at a fun time just becomes $L$. It is no longer true that any order of Tyrion, Cersei, and some specific guest is equally likely - for example, if we know Tyrion is the first guest and Cersei is the last guest, it is obvious that the only possible ordering is Tyrion Guest Cersei. Moreover, since the arrival times of other guests are independent of each other, knowing that Jaime arrives at a fun time no longer makes it more likely that Robert will arrive at a fun time - Robert still has to arrive in the interval $L$, as opposed to Jaime's arrival making the expected amount of fun time larger. Therefore, the probability of both Jaime and Robert arriving when it is fun, given that the amount of time between Cersei and Tyrion's arrival is $L$, is $L^{2}$.

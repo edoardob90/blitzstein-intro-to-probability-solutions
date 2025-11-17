@@ -1,0 +1,18 @@
+We can think of the problem as sampling with replacement where order matters.
+
+There are $6^{30}$ possible sequences of outcomes. We are interested in the cases 
+where each face of the die is rolled exactly $5$ times. Since each sequence is 
+equally likely, we can use the naive definition of probability.
+
+There are $binom(30, 5)$ ways to select the dice that fall on a $1$. Then, 
+$binom(25, 5)$ ways to select the dice falling on a $2$, $binom(20, 5)$ 
+falling on a $3$, $binom(15, 5)$ falling on a $4$, $binom(10, 5)$ falling 
+on a $5$ and finally, $binom(5, 5)$ falling on a $6$.
+
+Thus, the desired probability is $(binom(30, 5) binom(25, 5) 
+binom(20, 5) binom(15, 5) binom(10, 5) binom(5, 5))/(6^{30)}$ 
+
+Alternatively, imagining the sample space to be a $30$ digit long sequence
+of $1, 2 ... 6$, we want the cases in which each of $1, 2 ... 6$ numbers
+appear exactly five times. There are $(30!)/((5!)^{6)}$ ways to arrange 
+such a sequence. Hence, the probability is $(30!)/((5!)^{6) 6^{30}}$

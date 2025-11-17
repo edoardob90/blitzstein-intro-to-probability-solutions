@@ -1,0 +1,10 @@
+$ F_X(x) = P(X \le x) = \begin{cases}
+        0 , \text{ if } x < 1
+
+        (\lfloor x \rfloor)/(n) , \text{ if } 1 \le x \le n
+
+        1 , \text{ if } x > n
+    \end{cases}
+$
+
+where $\lfloor x \rfloor$ equals the largest integer that is less than or equal to $x$ .

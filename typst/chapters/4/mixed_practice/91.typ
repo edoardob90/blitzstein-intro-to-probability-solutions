@@ -1,0 +1,8 @@
++ 
+
++ If $F=G$, Then, $X_{j}$ is equally likely to be in any of the $m + n$
+positions in the ordered list. 
+$\text{E}(R) = sum_(j=1)^(m)\text{E}(R_{j}) = sum_(j=1)^(m)((m+n)
+(m+n+1))/(2)(1)/(m+n) = m(m+n+1)/(2).$
+
++ $R_{j} = (sum_(k=1)^(n)I_{Y_{k}} + \sum_{k eq.not j}I_{X_{k}} + 1)$ where $I_{Y_{k}}$ are the indicator random variables for $X_{j}$ being larger than $Y_{k}$ and $I_{X_{k}}$ are the indicator random variables for $X_{j}$ being larger than $X_{k}$. Note that $E(I_{Y_{k}}) = p$ for all k since the Ys are iid, and $E(I_{X_{k}}) = 1/2$ - $X_{j}$ and $X_{k}$ are iid and never equal, so they are equally likely to be bigger or smaller than the other. Then $\text{E}(R_{j}) = np + (m-1)/2 + 1$.Thus, $\text{E}(R) = m(np + (m-1)/2 + 1)$.

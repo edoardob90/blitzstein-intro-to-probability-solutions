@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const chapters = [
+  { num: 1, title: "Probability and Counting" },
+  { num: 2, title: "Conditional Probability" },
+  { num: 3, title: "Random Variables and Their Distributions" },
+  { num: 4, title: "Expectation" },
+  { num: 5, title: "Continuous Random Variables" },
+  { num: 6, title: "Moments" },
+];
+---
+
+<BaseLayout title="Chapters - Probability Solutions">
+  <h1>All Chapters</h1>
+
+  <section style="margin-top: 2rem;">
+    {chapters.map(chapter => (
+      <div style="margin: 2rem 0; padding: 1.5rem; border: 1px solid var(--border-color); border-radius: 8px;">
+        <h3>
+          <a href={`/chapters/${chapter.num}`}>
+            Chapter {chapter.num}: {chapter.title}
+          </a>
+        </h3>
+        <p style="color: #6b7280; margin-top: 0.5rem;">
+          View solutions for Chapter {chapter.num}
+        </p>
+      </div>
+    ))}
+  </section>
+</BaseLayout>

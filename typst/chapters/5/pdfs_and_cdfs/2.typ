@@ -1,0 +1,11 @@
+Take $\text{Unif}(0, (1)/(2))$, 
+
+$f(x) = \{ 2, x in (0, (1)/(2))\}$
+$int_C f(x) dx = 1$ where $C$ is the complete space.
+Say, $f(x) > 1$ in a given domain $X$ 
+
+$f(x) > 0$, so $int_D f(x) dx \le int_C f(x) dx $ 
+
+Here $int_D 1 dx < int_D f(x) dx$ 
+
+We can say, $|D| < 1$

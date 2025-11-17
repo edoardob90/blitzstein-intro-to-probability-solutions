@@ -1,0 +1,34 @@
+---
+interface Props {
+  number: string | number;
+  content: string;
+}
+
+const { number, content } = Astro.props;
+---
+
+<div class="problem">
+  <div class="problem-number">Problem {number}</div>
+  <div class="problem-content" set:html={content} />
+</div>
+
+<style>
+  .problem {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #fafafa;
+  }
+
+  .problem-number {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .problem-content {
+    line-height: 1.8;
+  }
+</style>

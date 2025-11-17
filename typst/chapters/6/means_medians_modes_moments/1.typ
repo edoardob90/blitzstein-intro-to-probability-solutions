@@ -1,0 +1,3 @@
+The median is $(a+b)/2$, the solution to $P(X<k) = (k-a)/(b-a) = 1/2$. 
+
+The mode is every real number between $a$ and $b$, since the PDF is a constant.

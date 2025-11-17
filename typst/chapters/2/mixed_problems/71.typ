@@ -1,0 +1,7 @@
++ 
+
++ To have $j$ toy types after sampling $i$ toys, we either have $j-1$ toy types after sampling $i-1$ toys, and the $i$-th toy is of a previously unseen type, or, we have $j$ toy types after sampling $i-1$ toys, and the $i$-th toy has an already seen type.
+
+Thus, $p_{i,j} = p_{i-1,j-1} (n-j+1)/(n) + p_{i-1,j} (j)/(n)$
+
++ Note that $p_{1,0} = 0, p_{1, 1} = 1$ and $p_{i, j} = 0$ for $j > i$. Using strong induction, a proof of the recursion in part $a$ follows.

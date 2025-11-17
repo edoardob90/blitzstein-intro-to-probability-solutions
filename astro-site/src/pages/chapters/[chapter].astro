@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Problem from '../../components/Problem.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { chapter: '1' } },
+    { params: { chapter: '2' } },
+    { params: { chapter: '3' } },
+    { params: { chapter: '4' } },
+    { params: { chapter: '5' } },
+    { params: { chapter: '6' } },
+  ];
+}
+
+const { chapter } = Astro.params;
+
+const chapterTitles: Record<string, string> = {
+  '1': 'Probability and Counting',
+  '2': 'Conditional Probability',
+  '3': 'Random Variables and Their Distributions',
+  '4': 'Expectation',
+  '5': 'Continuous Random Variables',
+  '6': 'Moments',
+};
+
+const title = chapterTitles[chapter] || `Chapter ${chapter}`;
+
+// This will be populated by the build script from Typst files
+// For now, we'll create a placeholder structure
+const sections = [
+  {
+    name: "Example Section",
+    problems: [
+      { number: 1, content: "<p>This is a placeholder. The build script will generate actual content from Typst files.</p>" }
+    ]
+  }
+];
+---
+
+<BaseLayout title={`Chapter ${chapter}: ${title}`}>
+  <h1>Chapter {chapter}: {title}</h1>
+
+  <div style="background-color: #fef3c7; border-left: 4px solid #f59e0b; padding: 1rem; margin: 2rem 0; border-radius: 4px;">
+    <strong>Note:</strong> Solutions are being migrated from LaTeX to Typst.
+    A build script will populate this page with actual solutions from Typst files.
+  </div>
+
+  {sections.map(section => (
+    <section style="margin-top: 3rem;">
+      <h2>{section.name}</h2>
+      {section.problems.map(problem => (
+        <Problem number={problem.number} content={problem.content} />
+      ))}
+    </section>
+  ))}
+
+  <div style="margin-top: 3rem; text-align: center;">
+    <a href="/chapters" style="display: inline-block; padding: 0.75rem 1.5rem; background-color: var(--primary-color); color: white; border-radius: 6px; text-decoration: none;">
+      ← Back to All Chapters
+    </a>
+  </div>
+</BaseLayout>

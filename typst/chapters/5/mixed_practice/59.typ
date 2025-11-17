@@ -1,0 +1,41 @@
+(a) Let $\theta_1$, $\theta_2$ and $\theta_3$ be the angles corresponding to points A, B and C respectively.
+From the statement of the problem, those angles are i.i.d. $\mathrm{Unif}(0,2\pi)$.
+
+The angles $\theta_1$, $\theta_2$ and $\theta_3$ divide the $[0,2\pi)$ range in four successive sub-intervals.
+The argument is wrong because the problem is not symmetric with respect to the three arcs, but rather with respect to the four angle sub-intervals.
+The average length of each sub-interval is $2\pi/4=\pi/2$, by symmetry.
+The length of the arc that contains the point (1,0) is the sum of the first and fourth sub-intervals, so it is twice as long as the other arcs on average. 
+
+(b)
+$\theta_1 = \text{Unif}(0, 2\pi)$
+$\theta_2 = \text{Unif}(0, 2\pi)$
+$\theta_3 = \text{Unif}(0, 2\pi)$
+
+$L_1 = \text{min} (\theta_1, \theta_2, \theta_3)$
+CDF,
+\begin{flalign*}
+    F(y)  = 1 - P(\text{min}(\theta_1, \theta_2, \theta_3) > y) 
+
+     = 1 - ( (2\pi - y)/(2\pi) )^3 \text{ , for } 0 \le y < 2\pi
+\end{flalign*}
+PDF,
+\begin{flalign*}
+    f(y)  = (d)/(dy) F(y) 
+
+     = (3)/(2\pi) (1 - (y)/(2\pi))^2 \text{ , for } 0 \le y < 2\pi
+\end{flalign*}
+
+(c)
+\begin{flalign*}
+    bb(E)[L]  = 2 bb(E)[L_1] 
+
+     = 2 integral_(0)^(2\pi) y (3)/(2\pi) (1 - (y)/(2\pi))^2 dy 
+
+     = (3)/(\pi) integral_(0)^(2\pi) (y + (y^3)/(4\pi^2) - (y^2)/(\pi)) dy 
+
+     = (3)/(\pi) [ (4\pi^2)/(2) + (1)/(4\pi^2) (16\pi^4)/(4) - (1)/(\pi) (8\pi^3)/(3)] 
+
+     = \pi
+\end{flalign*}
+
+We can reach the same result from the qualitative explanation given in part (a): since $L$ is the sum of the first and fourth sub-intervals, where the length of each sub-interval is $\pi/2$ on average, $bb(E)[L] = \pi/2+\pi/2 = \pi$.

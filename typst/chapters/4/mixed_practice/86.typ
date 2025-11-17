@@ -1,0 +1,23 @@
++ 
+
++ $P(X=x,Y=y,Z=z) = \frac{\binom{n_{A}}{x}\binom{n_{B}}{y}\binom{n_{C}}{z}}
+{binom(n, m)}$
+
++ Let $I_{j}$ be the indicator variable for person $j$ in the sample being a
+member of party $A$. Then, $X = sum_(i=1)^(m)I_{i} arrow.r.double \text{E}(X) =
+m\frac{n_{A}}{n}$ by symmetry.
+
++ Let's find $E(X^{2})$. If we square the expression for the sum of $X$'s constituent indicator r.v.s, we get
+
+$E(X^{2}) = sum_(i=1)^(m)E(I_{i}^{2}) + 2*\sum_{i < j, 1 lt.eq j lt.eq m}E(I_{i}I_{j})$
+
+Since $I_{i}^{2} = I_{i}$, we have $sum_(i=1)^(m)E(I_{i}^{2}) = \frac{m*n_{A}}{n}$
+
+Additionally, for any pair $i,j$, the r.v. $I_{i}I_{j}$ equals 1 only when some pair of samples are both members of party A, which occurs with probability $\frac{n_{A}(n_{A}-1)}{n(n-1)}$. There are ${m \choose 2}$ pairs $i,j$. Therefore, the expression $2*\sum_{i < j, 1 lt.eq j lt.eq m}E(I_{i}I_{j})$ evaluates to $\frac{n_{A}m(m-1)(n_{A}-1)}{n(n-1)}$.
+
+Finally, we have $E(X^{2})$, so now we can write $Var(X) = E(X^{2})-EX^{2}= \frac{m*n_{A}}{n} + \frac{n_{A}m(m-1)(n_{A}-1)}{n(n-1)} - \frac{m^{2}n_{A}^{2}}{n^{2}}$
+
+When $m=1$, $\text{Var}(X) = \frac{n_{A}}{n} - (\frac{n_{A}}{n})^{2} = \frac{n_
+{A}}{n}(1 - \frac{n_{A}}{n}) = \frac{n_{A}}{n} times \frac{n_{B} + n_{C}}{n}$.
+
+When $m=n$, Var(X) = 0. This makes sense, as if the sample is the entire population, we always get the same number of members of party A in our sample (all of them), so there is no variation.

@@ -1,0 +1,14 @@
+We are interested in the case of $3$ consecutive floors. There are $7$ equally 
+likely possibilities $(2, 3, 4), (3, 4, 5), (4, 5, 6), (5, 6, 7), 
+(6, 7, 8), (7, 8, 9), (8, 9, 10).$
+
+For each of this possibilities, there are $3$ ways for $1$ person to choose 
+button, $2$ for second and $1$ for third ($3!$ in total by multiplication rule).
+
+So number of favorable combinations is $7 * 3!$
+
+Generally each person have $9$ floors to choose from so for $3$ people there are 
+$9^3$ combinations by multiplication rule.
+
+Hence, the probability that the buttons for $3$ consecutive floors are pressed
+is $(7 * 3!)/(9^3)$

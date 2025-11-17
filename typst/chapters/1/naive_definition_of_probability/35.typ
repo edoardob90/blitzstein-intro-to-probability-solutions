@@ -1,0 +1,25 @@
+We can generate a random hand of $13$ cards with the desired property by 
+the following process:
+
++ 
+  
++ Pick a suite to sample $4$ cards from
+
+  
++ Sample $3$ cards for each one of the other suites
+
+There are $4$ suites and $binom(13, 4)$ ways to sample $4$ cards for any 
+of one of them. 
+
+By the multiplication rule, there are $binom(13, 3)^{3}$ ways to sample $3$ 
+cards of every one of the remaining $3$ suits. 
+
+By the multiplication rule, the total number of possibilities is 
+$4 binom(13, 4) binom(13, 3)^{3}.$
+
+The unconstrained number of $13$-card hands is $binom(52, 13)$. 
+
+Since each hand is equally likely, by the naive definition of probability, 
+the desired likelihood is
+
+$ \frac{4 binom(13, 4) binom(13, 3)^{3}}{binom(52, 13)} $

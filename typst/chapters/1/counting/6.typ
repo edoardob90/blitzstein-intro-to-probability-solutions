@@ -1,0 +1,16 @@
+Line up the 20 players in some order then say the first two are a pair, the
+next two are a pair, etc. This overcounts by a factor of 10! because we don't 
+care about the order of the games. So in total we have
+    $ (20!)/(10!) $
+ways for them to play. This correctly counts for the whether player A plays 
+white or black. If we didn't care we would need to divide by 2$^{10}$.
+
+Another way to look at it is to choose the 10 players who will play white then 
+let each of them choose their opponent from the other 10 players. This gives a 
+total of
+
+$ {20 \choose 10} times 10!$
+
+possibilities of how they are matched up. We don't care about the order of the 
+players who play white but once we've chosen them the order of the players who 
+play black matters since different orders mean different pairings.
